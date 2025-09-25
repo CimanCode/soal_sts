@@ -41,16 +41,63 @@
       .copas {
         color: red;
       }
+      .watermark-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 9999;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .watermark {
+        color: #0ea5e9;
+        opacity: 0.08;
+        font-size: 2.5rem;
+        font-weight: bold;
+        transform: rotate(-30deg);
+        padding: 4rem;
+        white-space: nowrap;
+      }
+      @media print {
+        body * {
+          visibility: hidden;
+        }
+        .no-print,
+        .no-print * {
+          display: none !important;
+        }
+      }
     </style>
   </head>
   <body>
+    <div class="watermark-container no-print">
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+      <span class="watermark">SMK AL FALAH</span
+      ><span class="watermark">SMK AL FALAH</span>
+    </div>
+
     <div
       class="min-h-screen bg-sky-50 flex flex-col items-center p-4 sm:p-6 md:p-8"
     >
       <main class="w-full max-w-3xl">
         <header class="text-center mb-12">
           <img
-            src="logosmkaf.jpg"
+            src="https://storage.googleapis.com/gemini-prod-us-east1-1339/publish/uploaded_logosmkaf.jpg-4564170c-003f-4a8d-b75c-e994517fc674"
             alt="Logo SMK Al Falah"
             class="w-24 h-24 mx-auto mb-4"
           />
